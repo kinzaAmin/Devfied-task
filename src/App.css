@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: left; */
+    height: 100vh;
+    overflow: hidden; /* Hide overflow for both x and y axes */
+    background-color: orangered;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .header {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    margin-bottom: 20px;
+   width: 70%;
+   color: #333;
+    
   }
-  to {
-    transform: rotate(360deg);
+  .paragraph{
+    width: 50%;
+    text-align: left;
+    margin-right: 4% !important;
+    color: #fff;
+    /* line-height: 0%; */
   }
-}
+  
+  .menu-container {
+    position: relative;
+    top: 48%;
+    left: 58%; /* Align 90% from the left */
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    border: 35px solid #fff;
+    border-radius: 50%;
+    margin-left: 35%;
+    cursor: pointer;
+    transition: all 0.9s;
+    overflow: visible;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 50%;
+    animation: rotate 9s infinite linear;
+  }
+  
+  .menu-item {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 5px solid #333 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .menu-item:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(18deg) translateY(-187px) rotate(-18deg);
+  }
+  
+  .menu-item:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg) translateY(-187px) rotate(-90deg);
+  }
+  
+  .menu-item:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(162deg) translateY(-187px) rotate(-162deg);
+  }
+  
+  .menu-item:nth-child(4) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(234deg) translateY(-187px) rotate(-234deg);
+  }
+  
+  .menu-item:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(306deg) translateY(-187px) rotate(-306deg);
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .app {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+  
+    .header {
+      text-align: center;
+      
+     margin-left:10% ;
+    
+    }
+
+    .paragraph{
+      text-align: center;
+    width: auto;
+    margin-left: 8% !important;
+    
+    }
+    
+    .menu-container {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 16%;
+      transform: translate(-50%, -50%);
+      width: 460px;
+      height: 460px;
+      border: 25px solid #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.9s;
+      overflow: visible;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: 50% 50%;
+      animation: rotate 9s infinite linear;
+    }
+  
+    .menu-item {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 5px solid #333 ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+  
+    .menu-item:nth-child(1) {
+      transform: translate(-50%, -50%) rotate(18deg) translateY(-225px) rotate(-18deg);
+    }
+  
+    .menu-item:nth-child(2) {
+      transform: translate(-50%, -50%) rotate(90deg) translateY(-225px) rotate(-90deg);
+    }
+  
+    .menu-item:nth-child(3) {
+      transform: translate(-50%, -50%) rotate(162deg) translateY(-225px) rotate(-162deg);
+    }
+  
+    .menu-item:nth-child(4) {
+      transform: translate(-50%, -50%) rotate(234deg) translateY(-225px) rotate(-234deg);
+    }
+  
+    .menu-item:nth-child(5) {
+      transform: translate(-50%, -50%) rotate(306deg) translateY(-225px) rotate(-306deg);
+    }
+  }
+  
+  
+  
+  
+  
